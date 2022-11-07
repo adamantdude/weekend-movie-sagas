@@ -8,7 +8,7 @@ function MovieDetail() {
 
     useEffect(() => {
         dispatch({ type:'FETCH_DETAIL', payload: id })
-    }, [])
+    }, [id])
 
     return (
         <div id="movieDetail">
