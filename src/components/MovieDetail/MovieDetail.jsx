@@ -5,10 +5,8 @@ import { useParams } from "react-router-dom";
 import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 
 function MovieDetail() {
-    const dispatch = useDispatch();
-    const { id } = useParams();
+    const [dispatch, history, { id }] = [useDispatch(), useHistory(), useParams()];
     const movie = useSelector(store => store.movies)
-    const history = useHistory();
     const genres = movie.map(genre => genre.name);
 
     console.log(movie);
