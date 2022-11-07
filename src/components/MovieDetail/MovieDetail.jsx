@@ -9,6 +9,7 @@ function MovieDetail() {
     const { id } = useParams();
     const movie = useSelector(store => store.movies)
     const history = useHistory();
+    const genres = movie.map(genre => genre.name);
 
     console.log(movie);
 
@@ -22,6 +23,8 @@ function MovieDetail() {
             {movie && <div>
                 <img src={movie[0].poster} />
                 {movie[0].title}
+                <br></br>
+                {genres.map(x => <label>' {x} ' </label>)}
                 <br></br>
                 {movie[0].description}
             </div>
