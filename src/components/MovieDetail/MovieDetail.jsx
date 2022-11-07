@@ -22,11 +22,17 @@ function MovieDetail() {
             <button onClick={() => history.push('/')}>Back To List</button>
             {movie.length > 0 && <div>
                 <img src={movie[0].poster} />
-                {movie[0].title}
-                <br></br>
-                {genres.map(x => <label key={x}>' {x} ' </label>)}
-                <br></br>
-                {movie[0].description}
+                <div>
+                    <div>
+                        {movie[0].title}
+                    </div>
+                    <div>
+                        {genres.map(x => <label key={x}>' {x} ' </label>)}
+                    </div>
+                    <div>
+                        {movie[0].description}
+                    </div>
+                </div>
             </div>
             }
         </div>
